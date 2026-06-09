@@ -1,12 +1,15 @@
 import dns from "dns";
 
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
-import { app } from "./app.js";
 
 import dotenv from "dotenv";
 dotenv.config({
     path: './.env'
 })
+import { app } from "./app.js";
+
+console.log(process.env.CLOUDINARY_API_KEY)
+
 console.log(process.cwd());
 // import mongoose from "mongoose";
 // import { DB_NAME } from "./constants";
